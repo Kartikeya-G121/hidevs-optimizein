@@ -1854,29 +1854,52 @@
           if (!response.ok) throw new Error("Generation failed");
 
           const data = await response.json();
-          const ideas = data.choices[0].message.content.split('---').filter(idea => idea.trim());
+          console.log("API Response:", data); // Debug log
+
+          // Split the content into individual ideas
+          const ideas = data.choices[0].message.content.split('---');
+          console.log("Split ideas:", ideas); // Debug log
 
           // Update idea cards with generated content
           const ideaCards = document.querySelectorAll(".idea-text");
           ideas.forEach((idea, index) => {
-            if (ideaCards[index]) {
-              const [title, explanation] = idea.split('\n').filter(line => line.trim());
-              const formattedTitle = title.replace('Title:', '').trim();
-              const formattedExplanation = explanation.replace('Explanation:', '').trim();
-              
+            if (ideaCards[index] && idea.trim()) {
+              const lines = idea.trim().split('\n').filter(line => line.trim());
+              console.log("Processing idea lines:", lines); // Debug log
+
+              let title = "";
+              let explanation = "";
+
+              // Find title and explanation in the lines
+              for (const line of lines) {
+                if (line.toLowerCase().startsWith('title:')) {
+                  title = line.substring(6).trim();
+                } else if (line.toLowerCase().startsWith('explanation:')) {
+                  explanation = line.substring(12).trim();
+                }
+              }
+
+              // If we couldn't find explicit title/explanation, use first line as title
+              if (!title && !explanation && lines.length > 0) {
+                title = lines[0];
+                explanation = lines.slice(1).join('\n');
+              }
+
               ideaCards[index].innerHTML = `
-                  <strong>${formattedTitle}</strong>
+                  <strong>${title || 'Idea'}</strong>
                   <br><br>
-                  ${formattedExplanation}
+                  ${explanation || idea.trim()}
               `;
             }
           });
 
           // Track activity
-          ActivityTracker.addActivity('idea_generated');
+          if (typeof ActivityTracker !== 'undefined') {
+            ActivityTracker.addActivity('idea_generated');
+          }
 
         } catch (error) {
-          console.error("Error:", error);
+          console.error("Error generating ideas:", error);
           const ideaCards = document.querySelectorAll(".idea-text");
           ideaCards.forEach((card) => {
             card.textContent = "Failed to generate idea. Please try again.";
