@@ -26,7 +26,7 @@ Actionable insights for profile optimization.
 
 # Technical Stack
 
-##Frontend
+## Frontend
 
 Languages/Frameworks: HTML, CSS, JavaScript.
 Design System:
