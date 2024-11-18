@@ -22,9 +22,9 @@
         display: flex;
         height: 100vh;
         background: linear-gradient(
-            135deg,
-            rgba(255, 192, 203, 0.25) 0%,    /* Light pink */
-            rgba(147, 51, 234, 0.2) 100%     /* Purple */
+          135deg,
+          rgba(255, 192, 203, 0.25) 0%,
+          /* Light pink */ rgba(147, 51, 234, 0.2) 100% /* Purple */
         );
       }
 
@@ -1264,7 +1264,10 @@
       }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
   </head>
   <body>
     <div class="sidebar">
@@ -1292,33 +1295,33 @@
     <div class="main-content">
       <div id="home" class="content-section active">
         <h2>Welcome back, <span id="welcomeUserName">Creator</span>!</h2>
-        
+
         <!-- Analytics Overview -->
         <div class="analytics-overview">
-            <div class="stat-cards" id="statCardsContainer">
-                <!-- Stats will be dynamically inserted here -->
-            </div>
+          <div class="stat-cards" id="statCardsContainer">
+            <!-- Stats will be dynamically inserted here -->
+          </div>
         </div>
 
         <!-- Today's Tasks -->
         <div class="card tasks-card">
-            <h3>Today's Tasks</h3>
-            <div class="task-list" id="taskListContainer">
-                <!-- Tasks will be dynamically inserted here -->
-            </div>
+          <h3>Today's Tasks</h3>
+          <div class="task-list" id="taskListContainer">
+            <!-- Tasks will be dynamically inserted here -->
+          </div>
         </div>
 
         <!-- Recent Activity -->
         <div class="card activity-card">
-            <h3>Recent Activity</h3>
-            <div class="activity-timeline" id="activityTimelineContainer">
-                <!-- Activities will be dynamically inserted here -->
-            </div>
+          <h3>Recent Activity</h3>
+          <div class="activity-timeline" id="activityTimelineContainer">
+            <!-- Activities will be dynamically inserted here -->
+          </div>
         </div>
 
         <!-- Quick Actions -->
         <div class="quick-actions-grid" id="quickActionsContainer">
-            <!-- Quick actions will be dynamically inserted here -->
+          <!-- Quick actions will be dynamically inserted here -->
         </div>
       </div>
 
@@ -1464,17 +1467,42 @@
 
         <!-- Upload Section -->
         <div class="card" style="text-align: center; padding: 40px">
-          <div id="dropZone" style="border: 2px dashed #e5e7eb; border-radius: 8px; padding: 40px; margin-bottom: 20px;">
+          <div
+            id="dropZone"
+            style="
+              border: 2px dashed #e5e7eb;
+              border-radius: 8px;
+              padding: 40px;
+              margin-bottom: 20px;
+            "
+          >
             <h2>How to Upload Your LinkedIn Profile</h2>
-            <ol style="text-align: left; max-width: 400px; margin: 0 auto;">
+            <ol style="text-align: left; max-width: 400px; margin: 0 auto">
               <li>Go to your LinkedIn profile.</li>
               <li>Click on "Resources".</li>
               <li>Select "Save to PDF" from the dropdown menu.</li>
               <li>Download the PDF to your computer.</li>
               <li>Click the button below to upload the PDF.</li>
             </ol>
-            <input type="file" id="pdfInput" accept=".pdf" style="display: none" />
-            <button class="choose-file-btn" onclick="document.getElementById('pdfInput').click()" style="background-color: var(--purple-600); color: white; padding: 12px 24px; border-radius: 6px; border: none; margin-top: 16px; cursor: pointer;">
+            <input
+              type="file"
+              id="pdfInput"
+              accept=".pdf"
+              style="display: none"
+            />
+            <button
+              class="choose-file-btn"
+              onclick="document.getElementById('pdfInput').click()"
+              style="
+                background-color: var(--purple-600);
+                color: white;
+                padding: 12px 24px;
+                border-radius: 6px;
+                border: none;
+                margin-top: 16px;
+                cursor: pointer;
+              "
+            >
               Choose File
             </button>
           </div>
@@ -1484,33 +1512,49 @@
         <div id="analysisResult" class="card" style="display: none">
           <div style="text-align: center; margin-bottom: 32px">
             <h3>Profile Analysis Score</h3>
-            <div style="width: 120px; height: 120px; background: var(--purple-600); border-radius: 50%; display: flex; align-items: center; justify-content: center; color: white; font-size: 24px; margin: 20px auto;">
+            <div
+              style="
+                width: 120px;
+                height: 120px;
+                background: var(--purple-600);
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: white;
+                font-size: 24px;
+                margin: 20px auto;
+              "
+            >
               <span id="profileScore">0</span>/100
             </div>
           </div>
 
           <div>
             <h3>Improvement Suggestions</h3>
-            <ul id="suggestionsList" style="list-style: none; padding: 0; margin: 0"></ul>
+            <ul
+              id="suggestionsList"
+              style="list-style: none; padding: 0; margin: 0"
+            ></ul>
           </div>
         </div>
       </div>
 
       <div id="user-profile" class="content-section">
         <h2>Your Profile</h2>
-        
+
         <!-- Personal Information Card -->
         <div class="card">
           <h3>Personal Information</h3>
           <div class="profile-info">
             <div class="info-group">
               <label>Email</label>
-              <input type="email" id="profileEmail" readonly>
+              <input type="email" id="profileEmail" readonly />
             </div>
             <div class="info-group">
               <label>Password</label>
               <div class="password-field">
-                <input type="password" id="profilePassword" readonly>
+                <input type="password" id="profilePassword" readonly />
                 <button onclick="togglePassword()" class="toggle-password">
                   <i class="fas fa-eye"></i>
                 </button>
@@ -1547,7 +1591,10 @@
               <div id="profileJobDescriptions" class="preference-tags"></div>
             </div>
           </div>
-          <button onclick="window.location.href='linkedin_setup.html'" class="update-preferences-btn">
+          <button
+            onclick="window.location.href='linkedin_setup.html'"
+            class="update-preferences-btn"
+          >
             Update Preferences
           </button>
         </div>
@@ -1560,36 +1607,37 @@
     </div>
 
     <script>
-      document.addEventListener('DOMContentLoaded', function() {
-        const currentUser = sessionStorage.getItem('currentUser');
-        const hasCompletedSetup = localStorage.getItem('linkedinSetupComplete');
-        
+      document.addEventListener("DOMContentLoaded", function () {
+        const currentUser = sessionStorage.getItem("currentUser");
+        const hasCompletedSetup = localStorage.getItem("linkedinSetupComplete");
+
         if (!currentUser) {
-            // No user logged in, redirect to auth page
-            window.location.href = 'auth.html';
+          // No user logged in, redirect to auth page
+          window.location.href = "auth.html";
         } else if (!hasCompletedSetup) {
-            // User hasn't completed setup, redirect to LinkedIn setup
-            window.location.href = 'linkedin_setup.html';
+          // User hasn't completed setup, redirect to LinkedIn setup
+          window.location.href = "linkedin_setup.html";
         } else {
-            // Initialize values only if they don't exist
-            if (!localStorage.getItem('savedIdeas')) {
-                localStorage.setItem('savedIdeas', JSON.stringify([]));
-            }
-            if (!localStorage.getItem('scheduledPosts')) {
-                localStorage.setItem('scheduledPosts', JSON.stringify({}));
-            }
-            localStorage.setItem('profileScore', '0');
-            localStorage.setItem('profileAnalyzed', 'false');
-            
-            // Continue with loading the profile
-            loadUserProfile();
-            // Update the saved ideas display
-            updateSavedIdeasDisplay();
+          // Initialize values only if they don't exist
+          if (!localStorage.getItem("savedIdeas")) {
+            localStorage.setItem("savedIdeas", JSON.stringify([]));
+          }
+          if (!localStorage.getItem("scheduledPosts")) {
+            localStorage.setItem("scheduledPosts", JSON.stringify({}));
+          }
+          localStorage.setItem("profileScore", "0");
+          localStorage.setItem("profileAnalyzed", "false");
+
+          // Continue with loading the profile
+          loadUserProfile();
+          // Update the saved ideas display
+          updateSavedIdeasDisplay();
         }
       });
 
       // Define API_KEY globally so it's accessible to all functions
-      const API_KEY ="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";
+      const API_KEY =
+        "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";
 
       // Navigation functionality
       document.addEventListener("DOMContentLoaded", function () {
@@ -1630,13 +1678,13 @@
         generatedPost.textContent = "Generating your post...";
 
         // Clear chat history for new generation
-        chatHistory.innerHTML = '';
+        chatHistory.innerHTML = "";
 
         const prompts = {
           professional: `Using this idea and explanation: "${input}", write a detailed, professional social media post that directly explains the topic. The post should be comprehensive and self-contained, not a teaser or promotional message. Include relevant examples and insights.`,
           casual: `Using this idea and explanation: "${input}", write a friendly and conversational social media post that directly explains the topic. Make it easy to understand and relatable, with examples that anyone can grasp. The post should contain all the information, not redirect to an article.`,
           funny: `Using this idea and explanation: "${input}", write a humorous and entertaining social media post that directly explains the topic. Include witty observations and fun examples while still being informative. Make it a complete post, not a teaser.`,
-          viral: `Using this idea and explanation: "${input}", write an engaging and shareable social media post that directly explains the topic. Make it attention-grabbing and informative, with interesting facts and insights. The post should be complete in itself, not a link to an article.`
+          viral: `Using this idea and explanation: "${input}", write an engaging and shareable social media post that directly explains the topic. Make it attention-grabbing and informative, with interesting facts and insights. The post should be complete in itself, not a link to an article.`,
         };
 
         try {
@@ -1653,7 +1701,8 @@
                 messages: [
                   {
                     role: "system",
-                    content: "You are a social media content creator who writes detailed, informative posts. Your posts should be complete and self-contained, not teasers or promotional content that redirects to articles."
+                    content:
+                      "You are a social media content creator who writes detailed, informative posts. Your posts should be complete and self-contained, not teasers or promotional content that redirects to articles.",
                   },
                   {
                     role: "user",
@@ -1679,11 +1728,13 @@
           updateCharCount(generatedText.length);
 
           // Add success message to chat history
-          addMessageToChat("ai", "✨ Post generated successfully! You can now edit it directly or ask for refinements below.");
+          addMessageToChat(
+            "ai",
+            "✨ Post generated successfully! You can now edit it directly or ask for refinements below."
+          );
 
           // Log activity
-          ActivityTracker.addActivity('post_created', generatedText);
-
+          ActivityTracker.addActivity("post_created", generatedText);
         } catch (error) {
           console.error("Error:", error);
           statusElement.innerHTML = "❌ Generation failed";
@@ -1808,79 +1859,100 @@
           return;
         }
 
-        // Clear existing cards and show loading state
-        ideasGrid.innerHTML = "";
-        for (let i = 0; i < 4; i++) {
-          ideasGrid.innerHTML += `
-            <div class="idea-card card">
-                <h3>Idea #${i + 1}</h3>
-                <p class="idea-text">Generating idea...</p>
-                <div class="idea-actions">
-                    <button onclick="useIdea(this)" class="use-button">Use</button>
-                    <button onclick="saveIdea(this)" class="save-button">Save</button>
-                </div>
-            </div>
-        `;
-        }
-
         try {
-          const response = await fetch(
-            "https://api.groq.com/openai/v1/chat/completions",
-            {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                Authorization: `Bearer ${API_KEY}`,
-              },
-              body: JSON.stringify({
-                model: "llama3-70b-8192",
-                messages: [
-                  {
-                    role: "system",
-                    content: "Generate exactly 4 unique content ideas. Each idea should have a title and explanation. Format each idea as 'Title: [title]\\nExplanation: [explanation]'. Separate each idea with '---'",
-                  },
-                  {
-                    role: "user",
-                    content: `Generate 4 unique content ideas related to: ${input}`
-                  },
-                ],
-                temperature: 0.8,
-                max_tokens: 1000,
-              }),
-            }
-          );
+          // Show loading state
+          ideasGrid.innerHTML = Array(4)
+            .fill('')
+            .map((_, i) => `
+                <div class="idea-card card">
+                    <h3>Idea #${i + 1}</h3>
+                    <p class="idea-text">Generating idea...</p>
+                    <div class="idea-actions">
+                        <button onclick="useIdea(this)" class="use-button">Use</button>
+                        <button onclick="saveIdea(this)" class="save-button">Save</button>
+                    </div>
+                </div>
+            `).join('');
 
-          if (!response.ok) throw new Error("Generation failed");
+          const response = await fetch("https://api.groq.com/openai/v1/chat/completions", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+              "Authorization": `Bearer ${API_KEY}`,
+            },
+            body: JSON.stringify({
+              model: "llama3-70b-8192",
+              messages: [
+                {
+                  role: "system",
+                  content: `Generate 4 unique content ideas. Format each idea as a title followed by a detailed explanation. Do not include "Title:" prefix. Separate ideas with "---".`
+                },
+                {
+                  role: "user",
+                  content: `Generate 4 unique, detailed content ideas related to: ${input}`
+                }
+              ],
+              temperature: 0.8,
+              max_tokens: 1000,
+            }),
+          });
+
+          if (!response.ok) throw new Error(`API request failed: ${response.status}`);
 
           const data = await response.json();
-          const ideas = data.choices[0].message.content.split('---').filter(idea => idea.trim());
+          if (!data?.choices?.[0]?.message?.content) {
+            throw new Error('Invalid API response format');
+          }
 
-          // Update idea cards
+          // Parse ideas from response
+          const ideas = data.choices[0].message.content
+            .split('---')
+            .filter(Boolean)
+            .map(idea => {
+              const lines = idea.trim().split('\n').filter(line => line.trim());
+              
+              // First non-empty line is the title
+              const title = lines[0]?.trim() || 'Untitled';
+              
+              // Remaining lines form the explanation
+              const explanation = lines.slice(1)
+                .filter(line => line.trim())
+                .join('\n')
+                .trim();
+
+              return { title, explanation };
+            });
+
+          // Update idea cards with content
           const ideaCards = document.querySelectorAll(".idea-text");
           ideas.forEach((idea, index) => {
-            if (ideaCards[index]) {
-              const [title, explanation] = idea.split('\n').filter(line => line.trim());
-              const formattedTitle = title.replace('Title:', '').trim();
-              const formattedExplanation = explanation.replace('Explanation:', '').trim();
+            if (!ideaCards[index]) return;
+
+            try {
+              // Remove any remaining "Title:" prefix if present
+              const cleanTitle = idea.title.replace(/^Title:\s*/i, '');
               
               ideaCards[index].innerHTML = `
-                  <strong>${formattedTitle}</strong>
-                  <br><br>
-                  ${formattedExplanation}
+                  <strong>${cleanTitle}</strong>
+                  ${idea.explanation ? `<br><br>${idea.explanation}` : ''}
               `;
+            } catch (parseError) {
+              console.error(`Error parsing idea ${index + 1}:`, parseError);
+              ideaCards[index].innerHTML = "Error parsing idea. Please try again.";
             }
           });
 
+          ActivityTracker.addActivity('idea_generated');
+
         } catch (error) {
-          console.error("Error:", error);
+          console.error("Error generating ideas:", error);
           const ideaCards = document.querySelectorAll(".idea-text");
-          ideaCards.forEach((card) => {
-            card.textContent = "Failed to generate idea. Please try again.";
+          ideaCards.forEach(card => {
+            if (card) {
+              card.innerHTML = "Failed to generate idea. Please try again.";
+            }
           });
         }
-
-        // Add this new function
-        ActivityTracker.addActivity('idea_generated');
       }
 
       // Add this new function
@@ -1950,7 +2022,7 @@
       function saveIdea(button) {
         const ideaCard = button.closest(".idea-card");
         const ideaText = ideaCard.querySelector(".idea-text").textContent;
-        
+
         // Get current saved ideas
         let savedIdeas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
 
@@ -1958,7 +2030,7 @@
         if (!savedIdeas.includes(ideaText)) {
           savedIdeas.push(ideaText);
           localStorage.setItem("savedIdeas", JSON.stringify(savedIdeas));
-          
+
           // Update the display immediately
           updateSavedIdeasDisplay();
 
@@ -1972,7 +2044,7 @@
           }, 2000);
 
           // Add activity
-          ActivityTracker.addActivity('idea_saved');
+          ActivityTracker.addActivity("idea_saved");
         }
       }
 
@@ -2239,7 +2311,7 @@
         }
 
         // Add this new function
-        ActivityTracker.addActivity('post_scheduled', newDate);
+        ActivityTracker.addActivity("post_scheduled", newDate);
       }
 
       function deleteScheduledPost(date) {
@@ -2342,7 +2414,6 @@
           processFile(files[0]);
         }
       }
-      
 
       async function processFile(file) {
         try {
@@ -2371,18 +2442,20 @@
 
       async function analyzeProfile(profileText) {
         try {
-          const response = await fetch('https://api.groq.com/openai/v1/chat/completions', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-                'Authorization': `Bearer ${API_KEY}`
-            },
-            body: JSON.stringify({
+          const response = await fetch(
+            "https://api.groq.com/openai/v1/chat/completions",
+            {
+              method: "POST",
+              headers: {
+                "Content-Type": "application/json",
+                Authorization: `Bearer ${API_KEY}`,
+              },
+              body: JSON.stringify({
                 model: "llama3-70b-8192",
                 messages: [
-                    {
-                        role: "system",
-                        content: `You are a LinkedIn profile analyzer. Respond ONLY with a JSON object in this EXACT format:
+                  {
+                    role: "system",
+                    content: `You are a LinkedIn profile analyzer. Respond ONLY with a JSON object in this EXACT format:
 {
   "overall": 75,
   "sections": {
@@ -2419,53 +2492,56 @@
       "example": "Example of improvement"
     }
   }
-}`
-                    },
-                    {
-                        role: "user",
-                        content: `Analyze this LinkedIn profile and return ONLY the JSON response:\n\n${profileText}`
-                    }
+}`,
+                  },
+                  {
+                    role: "user",
+                    content: `Analyze this LinkedIn profile and return ONLY the JSON response:\n\n${profileText}`,
+                  },
                 ],
                 temperature: 0.3,
-                max_tokens: 2000
-            })
-        });
+                max_tokens: 2000,
+              }),
+            }
+          );
 
-        if (!response.ok) {
-            throw new Error(`API request failed with status ${response.status}`);
-        }
+          if (!response.ok) {
+            throw new Error(
+              `API request failed with status ${response.status}`
+            );
+          }
 
-        const data = await response.json();
-        console.log('Raw API response:', data);
+          const data = await response.json();
+          console.log("Raw API response:", data);
 
-        // Clean the response text
-        let analysisText = data.choices[0].message.content
+          // Clean the response text
+          let analysisText = data.choices[0].message.content
             .trim()
-            .replace(/[\u0000-\u001F\u007F-\u009F]/g, '') // Remove control characters
-            .replace(/\n/g, ' ') // Replace newlines with spaces
-            .replace(/\s+/g, ' '); // Replace multiple spaces with single space
+            .replace(/[\u0000-\u001F\u007F-\u009F]/g, "") // Remove control characters
+            .replace(/\n/g, " ") // Replace newlines with spaces
+            .replace(/\s+/g, " "); // Replace multiple spaces with single space
 
-        console.log('Cleaned analysis text:', analysisText);
+          console.log("Cleaned analysis text:", analysisText);
 
-        // Try to extract just the JSON part if there's any extra text
-        const jsonMatch = analysisText.match(/\{[\s\S]*\}/);
-        if (jsonMatch) {
+          // Try to extract just the JSON part if there's any extra text
+          const jsonMatch = analysisText.match(/\{[\s\S]*\}/);
+          if (jsonMatch) {
             analysisText = jsonMatch[0];
-        }
+          }
 
-        let analysis = JSON.parse(analysisText);
-        console.log('Parsed analysis:', analysis);
+          let analysis = JSON.parse(analysisText);
+          console.log("Parsed analysis:", analysis);
 
-        // After successfully parsing the analysis, store the score and set analyzed flag
-        localStorage.setItem('profileScore', analysis.overall);
-        localStorage.setItem('profileAnalyzed', 'true');
-        
-        // Update the home page stats
-        updateHomePageStats();
+          // After successfully parsing the analysis, store the score and set analyzed flag
+          localStorage.setItem("profileScore", analysis.overall);
+          localStorage.setItem("profileAnalyzed", "true");
 
-        // Show the results
-        const analysisResult = document.getElementById('analysisResult');
-        analysisResult.innerHTML = `
+          // Update the home page stats
+          updateHomePageStats();
+
+          // Show the results
+          const analysisResult = document.getElementById("analysisResult");
+          analysisResult.innerHTML = `
             <div style="text-align: center; padding: 20px;">
                 <h2 style="font-size: 24px; margin-bottom: 20px;">Profile Analysis Score</h2>
                 
@@ -2491,7 +2567,9 @@
                     
                     <!-- Suggestions Container -->
                     <div id="suggestionsContainer" style="text-align: left;">
-                        ${Object.entries(analysis.suggestions).map(([section, suggestion]) => `
+                        ${Object.entries(analysis.suggestions)
+                          .map(
+                            ([section, suggestion]) => `
                             <div style="margin-bottom: 20px; border: 1px solid #e5e7eb; border-radius: 8px; overflow: hidden;">
                                 <div style="background-color: #f3f4f6; padding: 10px; font-weight: bold;">
                                     ${capitalizeFirstLetter(section)}
@@ -2529,18 +2607,19 @@
                                     ${suggestion.example}
                                 </div>
                             </div>
-                        `).join('')}
+                        `
+                          )
+                          .join("")}
                     </div>
                 </div>
             </div>
         `;
 
-        // Show the results
-        analysisResult.style.display = 'block';
-
+          // Show the results
+          analysisResult.style.display = "block";
         } catch (error) {
-            console.error('Error in analyzeProfile:', error);
-            document.getElementById('analysisResult').innerHTML = `
+          console.error("Error in analyzeProfile:", error);
+          document.getElementById("analysisResult").innerHTML = `
                 <div style="color: #DC2626; padding: 12px; background-color: #FEE2E2; border-radius: 6px;">
                     Error analyzing profile: ${error.message}
                     <br><br>
@@ -2567,162 +2646,193 @@
         // Your signup logic here
 
         // On successful signup, redirect to the LinkedIn setup page
-        window.location.href = 'linkedin_setup.html';
+        window.location.href = "linkedin_setup.html";
       }
 
       // After signup, store user data
-      localStorage.setItem('userId', '12345'); // Example user ID
+      localStorage.setItem("userId", "12345"); // Example user ID
 
       // In linkedin_setup.html, retrieve user data
-      const userId = localStorage.getItem('userId');
+      const userId = localStorage.getItem("userId");
 
       function loadLinkedInPreferences() {
-        const preferences = JSON.parse(localStorage.getItem('linkedinPreferences'));
+        const preferences = JSON.parse(
+          localStorage.getItem("linkedinPreferences")
+        );
         if (preferences) {
           // Update UI with saved preferences
-          document.getElementById('sharePreferences').innerHTML = preferences.sharePreferences
-            .map(pref => `<div class="preference-tag">${pref}</div>`).join('');
+          document.getElementById("sharePreferences").innerHTML =
+            preferences.sharePreferences
+              .map((pref) => `<div class="preference-tag">${pref}</div>`)
+              .join("");
           // ... load other preferences
         }
       }
-      
 
       // Add these functions to your existing JavaScript
       function loadUserProfile() {
         // Load user data from sessionStorage
-        const user = JSON.parse(sessionStorage.getItem('currentUser'));
+        const user = JSON.parse(sessionStorage.getItem("currentUser"));
         if (user) {
-            document.getElementById('profileEmail').value = user.email || '';
-            document.getElementById('profilePassword').value = user.password || '';
+          document.getElementById("profileEmail").value = user.email || "";
+          document.getElementById("profilePassword").value =
+            user.password || "";
         }
 
         // Load LinkedIn preferences from localStorage
-        const linkedinPrefs = JSON.parse(localStorage.getItem('linkedinPreferences'));
+        const linkedinPrefs = JSON.parse(
+          localStorage.getItem("linkedinPreferences")
+        );
         if (linkedinPrefs) {
-            // Display What You Share
-            const sharePrefsContainer = document.getElementById('profileSharePreferences');
-            if (sharePrefsContainer && linkedinPrefs.sharePreferences) {
-                sharePrefsContainer.innerHTML = linkedinPrefs.sharePreferences
-                    .map(pref => `<div class="preference-tag">${pref}</div>`)
-                    .join('');
-            }
+          // Display What You Share
+          const sharePrefsContainer = document.getElementById(
+            "profileSharePreferences"
+          );
+          if (sharePrefsContainer && linkedinPrefs.sharePreferences) {
+            sharePrefsContainer.innerHTML = linkedinPrefs.sharePreferences
+              .map((pref) => `<div class="preference-tag">${pref}</div>`)
+              .join("");
+          }
 
-            // Display Why You Share
-            const shareReasonsContainer = document.getElementById('profileShareReasons');
-            if (shareReasonsContainer && linkedinPrefs.shareReasons) {
-                shareReasonsContainer.innerHTML = linkedinPrefs.shareReasons
-                    .map(reason => `<div class="preference-tag">${reason}</div>`)
-                    .join('');
-            }
+          // Display Why You Share
+          const shareReasonsContainer = document.getElementById(
+            "profileShareReasons"
+          );
+          if (shareReasonsContainer && linkedinPrefs.shareReasons) {
+            shareReasonsContainer.innerHTML = linkedinPrefs.shareReasons
+              .map((reason) => `<div class="preference-tag">${reason}</div>`)
+              .join("");
+          }
 
-            // Display Writing Level
-            const writingSkillsContainer = document.getElementById('profileWritingSkills');
-            if (writingSkillsContainer && linkedinPrefs.writingSkills) {
-                writingSkillsContainer.innerHTML = linkedinPrefs.writingSkills
-                    .map(skill => `<div class="preference-tag">${skill}</div>`)
-                    .join('');
-            }
+          // Display Writing Level
+          const writingSkillsContainer = document.getElementById(
+            "profileWritingSkills"
+          );
+          if (writingSkillsContainer && linkedinPrefs.writingSkills) {
+            writingSkillsContainer.innerHTML = linkedinPrefs.writingSkills
+              .map((skill) => `<div class="preference-tag">${skill}</div>`)
+              .join("");
+          }
 
-            // Display Industry
-            const industriesContainer = document.getElementById('profileIndustries');
-            if (industriesContainer && linkedinPrefs.industries) {
-                industriesContainer.innerHTML = linkedinPrefs.industries
-                    .map(industry => `<div class="preference-tag">${industry}</div>`)
-                    .join('');
-            }
+          // Display Industry
+          const industriesContainer =
+            document.getElementById("profileIndustries");
+          if (industriesContainer && linkedinPrefs.industries) {
+            industriesContainer.innerHTML = linkedinPrefs.industries
+              .map(
+                (industry) => `<div class="preference-tag">${industry}</div>`
+              )
+              .join("");
+          }
 
-            // Display Job Description
-            const jobDescContainer = document.getElementById('profileJobDescriptions');
-            if (jobDescContainer && linkedinPrefs.jobDescriptions) {
-                jobDescContainer.innerHTML = linkedinPrefs.jobDescriptions
-                    .map(desc => `<div class="preference-tag">${desc}</div>`)
-                    .join('');
-            }
+          // Display Job Description
+          const jobDescContainer = document.getElementById(
+            "profileJobDescriptions"
+          );
+          if (jobDescContainer && linkedinPrefs.jobDescriptions) {
+            jobDescContainer.innerHTML = linkedinPrefs.jobDescriptions
+              .map((desc) => `<div class="preference-tag">${desc}</div>`)
+              .join("");
+          }
         }
       }
 
       // Add this to ensure the profile loads when the page loads
-      document.addEventListener('DOMContentLoaded', function() {
+      document.addEventListener("DOMContentLoaded", function () {
         loadUserProfile();
       });
 
       // Update these functions for password visibility toggle and change
       function togglePassword() {
-        const passwordInput = document.getElementById('profilePassword');
+        const passwordInput = document.getElementById("profilePassword");
         if (passwordInput) {
-            passwordInput.type = passwordInput.type === 'password' ? 'text' : 'password';
-            const icon = document.querySelector('.toggle-password i');
-            if (icon) {
-                icon.className = passwordInput.type === 'password' ? 'fas fa-eye' : 'fas fa-eye-slash';
-            }
+          passwordInput.type =
+            passwordInput.type === "password" ? "text" : "password";
+          const icon = document.querySelector(".toggle-password i");
+          if (icon) {
+            icon.className =
+              passwordInput.type === "password"
+                ? "fas fa-eye"
+                : "fas fa-eye-slash";
+          }
         }
       }
 
       function changePassword() {
-        const newPassword = prompt('Enter new password:');
+        const newPassword = prompt("Enter new password:");
         if (newPassword) {
-            const user = JSON.parse(sessionStorage.getItem('currentUser'));
-            user.password = newPassword;
-            sessionStorage.setItem('currentUser', JSON.stringify(user));
-            document.getElementById('profilePassword').value = newPassword;
-            alert('Password updated successfully!');
+          const user = JSON.parse(sessionStorage.getItem("currentUser"));
+          user.password = newPassword;
+          sessionStorage.setItem("currentUser", JSON.stringify(user));
+          document.getElementById("profilePassword").value = newPassword;
+          alert("Password updated successfully!");
         }
       }
 
       function handleLogout() {
         // Clear all storage including the profile analyzed flag
         sessionStorage.clear();
-        localStorage.removeItem('linkedinPreferences');
-        localStorage.removeItem('linkedinSetupComplete');
-        localStorage.removeItem('profileScore');
-        localStorage.removeItem('profileAnalyzed');
-        localStorage.removeItem('savedIdeas');        // Add this line
-        localStorage.removeItem('scheduledPosts');    // Add this line
-        
+        localStorage.removeItem("linkedinPreferences");
+        localStorage.removeItem("linkedinSetupComplete");
+        localStorage.removeItem("profileScore");
+        localStorage.removeItem("profileAnalyzed");
+        localStorage.removeItem("savedIdeas"); // Add this line
+        localStorage.removeItem("scheduledPosts"); // Add this line
+
         // Redirect to login page
-        window.location.href = 'auth.html';
+        window.location.href = "auth.html";
       }
 
       // Add this navigation function to your JavaScript
       function navigateTo(section) {
-          // Update navigation buttons
-          document.querySelectorAll('.nav-button').forEach(btn => {
-              btn.classList.remove('active');
-              if (btn.getAttribute('data-target') === section) {
-                  btn.classList.add('active');
-              }
-          });
+        // Update navigation buttons
+        document.querySelectorAll(".nav-button").forEach((btn) => {
+          btn.classList.remove("active");
+          if (btn.getAttribute("data-target") === section) {
+            btn.classList.add("active");
+          }
+        });
 
-          // Hide all sections and show target section
-          document.querySelectorAll('.content-section').forEach(section => {
-              section.classList.remove('active');
-          });
-          document.getElementById(section).classList.add('active');
+        // Hide all sections and show target section
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.classList.remove("active");
+        });
+        document.getElementById(section).classList.add("active");
       }
 
       // Add these functions after your existing JavaScript code
       function updateHomePageStats() {
-          // Get saved ideas count
-          const savedIdeas = JSON.parse(localStorage.getItem('savedIdeas')) || [];
-          
-          // Get scheduled posts count and next post date
-          const scheduledPosts = JSON.parse(localStorage.getItem('scheduledPosts')) || {};
-          const scheduledDates = Object.keys(scheduledPosts).sort();
-          const nextPostDate = getNextPostDate(scheduledDates);
-          
-          // Only get profileScore if it has been analyzed
-          const hasAnalyzedProfile = localStorage.getItem('profileAnalyzed') === 'true';
-          const profileScore = hasAnalyzedProfile ? (localStorage.getItem('profileScore') || '0') : '0';
-          const profileTrend = hasAnalyzedProfile ? 'Based on latest analysis' : 'Upload PDF to analyze';
+        // Get saved ideas count
+        const savedIdeas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
 
-          // Update the stats in the DOM
-          const statsHTML = `
+        // Get scheduled posts count and next post date
+        const scheduledPosts =
+          JSON.parse(localStorage.getItem("scheduledPosts")) || {};
+        const scheduledDates = Object.keys(scheduledPosts).sort();
+        const nextPostDate = getNextPostDate(scheduledDates);
+
+        // Only get profileScore if it has been analyzed
+        const hasAnalyzedProfile =
+          localStorage.getItem("profileAnalyzed") === "true";
+        const profileScore = hasAnalyzedProfile
+          ? localStorage.getItem("profileScore") || "0"
+          : "0";
+        const profileTrend = hasAnalyzedProfile
+          ? "Based on latest analysis"
+          : "Upload PDF to analyze";
+
+        // Update the stats in the DOM
+        const statsHTML = `
               <div class="stat-card">
                   <div class="stat-icon">📈</div>
                   <div class="stat-info">
                       <h3>Post Ideas</h3>
                       <p class="stat-number">${savedIdeas.length}</p>
-                      <p class="stat-trend">${savedIdeas.length > 0 ? `${savedIdeas.length} saved ideas` : 'No saved ideas yet'}</p>
+                      <p class="stat-trend">${
+                        savedIdeas.length > 0
+                          ? `${savedIdeas.length} saved ideas`
+                          : "No saved ideas yet"
+                      }</p>
                   </div>
               </div>
               <div class="stat-card">
@@ -2730,7 +2840,11 @@
                   <div class="stat-info">
                       <h3>Scheduled Posts</h3>
                       <p class="stat-number">${scheduledDates.length}</p>
-                      <p class="stat-trend">${nextPostDate ? `Next post in ${nextPostDate}` : 'No scheduled posts'}</p>
+                      <p class="stat-trend">${
+                        nextPostDate
+                          ? `Next post in ${nextPostDate}`
+                          : "No scheduled posts"
+                      }</p>
                   </div>
               </div>
               <div class="stat-card">
@@ -2743,64 +2857,74 @@
               </div>
           `;
 
-          document.querySelector('.stat-cards').innerHTML = statsHTML;
+        document.querySelector(".stat-cards").innerHTML = statsHTML;
       }
 
       function getNextPostDate(scheduledDates) {
-          if (scheduledDates.length === 0) return null;
-          
-          const today = new Date();
-          today.setHours(0, 0, 0, 0);
-          
-          // Find the next scheduled date
-          const nextDate = scheduledDates.find(date => {
-              const postDate = new Date(date);
-              return postDate >= today;
-          });
+        if (scheduledDates.length === 0) return null;
 
-          if (!nextDate) return null;
+        const today = new Date();
+        today.setHours(0, 0, 0, 0);
 
-          // Calculate the difference in days
-          const diffTime = Math.abs(new Date(nextDate) - today);
-          const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-          
-          return diffDays === 1 ? 'tomorrow' : `${diffDays} days`;
+        // Find the next scheduled date
+        const nextDate = scheduledDates.find((date) => {
+          const postDate = new Date(date);
+          return postDate >= today;
+        });
+
+        if (!nextDate) return null;
+
+        // Calculate the difference in days
+        const diffTime = Math.abs(new Date(nextDate) - today);
+        const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+
+        return diffDays === 1 ? "tomorrow" : `${diffDays} days`;
       }
 
       // New Home Page Management Functions
       function initializeHomePage() {
-          updateHomePageStats();
-          updateTasks();
-          updateRecentActivity();
-          updateQuickActions();
-          updateWelcomeName();
+        updateHomePageStats();
+        updateTasks();
+        updateRecentActivity();
+        updateQuickActions();
+        updateWelcomeName();
       }
 
       function updateWelcomeName() {
-          const user = JSON.parse(sessionStorage.getItem('currentUser'));
-          const welcomeElement = document.getElementById('welcomeUserName');
-          if (welcomeElement) {
-              welcomeElement.textContent = user?.name || 'Creator';
-          }
+        const user = JSON.parse(sessionStorage.getItem("currentUser"));
+        const welcomeElement = document.getElementById("welcomeUserName");
+        if (welcomeElement) {
+          welcomeElement.textContent = user?.name || "Creator";
+        }
       }
 
       function updateHomePageStats() {
-          const savedIdeas = JSON.parse(localStorage.getItem('savedIdeas')) || [];
-          const scheduledPosts = JSON.parse(localStorage.getItem('scheduledPosts')) || {};
-          const scheduledDates = Object.keys(scheduledPosts).sort();
-          
-          // Only get profileScore if it has been analyzed
-          const hasAnalyzedProfile = localStorage.getItem('profileAnalyzed') === 'true';
-          const profileScore = hasAnalyzedProfile ? (localStorage.getItem('profileScore') || '0') : '0';
-          const profileTrend = hasAnalyzedProfile ? 'Based on latest analysis' : 'Upload PDF to analyze';
+        const savedIdeas = JSON.parse(localStorage.getItem("savedIdeas")) || [];
+        const scheduledPosts =
+          JSON.parse(localStorage.getItem("scheduledPosts")) || {};
+        const scheduledDates = Object.keys(scheduledPosts).sort();
 
-          const statsHTML = `
+        // Only get profileScore if it has been analyzed
+        const hasAnalyzedProfile =
+          localStorage.getItem("profileAnalyzed") === "true";
+        const profileScore = hasAnalyzedProfile
+          ? localStorage.getItem("profileScore") || "0"
+          : "0";
+        const profileTrend = hasAnalyzedProfile
+          ? "Based on latest analysis"
+          : "Upload PDF to analyze";
+
+        const statsHTML = `
               <div class="stat-card">
                   <div class="stat-icon">📈</div>
                   <div class="stat-info">
                       <h3>Post Ideas</h3>
                       <p class="stat-number">${savedIdeas.length}</p>
-                      <p class="stat-trend">${savedIdeas.length > 0 ? `${savedIdeas.length} saved ideas` : 'No saved ideas yet'}</p>
+                      <p class="stat-trend">${
+                        savedIdeas.length > 0
+                          ? `${savedIdeas.length} saved ideas`
+                          : "No saved ideas yet"
+                      }</p>
                   </div>
               </div>
               <div class="stat-card">
@@ -2808,7 +2932,9 @@
                   <div class="stat-info">
                       <h3>Scheduled Posts</h3>
                       <p class="stat-number">${scheduledDates.length}</p>
-                      <p class="stat-trend">${getNextPostInfo(scheduledDates)}</p>
+                      <p class="stat-trend">${getNextPostInfo(
+                        scheduledDates
+                      )}</p>
                   </div>
               </div>
               <div class="stat-card">
@@ -2818,22 +2944,23 @@
                       <p class="stat-number">${profileScore}%</p>
                       <p class="stat-trend">${profileTrend}</p>
                   </div>
-              </div>
           `;
 
-          const container = document.getElementById('statCardsContainer');
-          if (container) {
-              container.innerHTML = statsHTML;
-          }
+        const container = document.getElementById("statCardsContainer");
+        if (container) {
+          container.innerHTML = statsHTML;
+        }
       }
 
       function updateTasks() {
-          const tasks = TaskManager.getTasks();
-          const taskListHTML = tasks.map(task => `
-              <div class="task-item ${task.completed ? 'completed' : ''}">
+        const tasks = TaskManager.getTasks();
+        const taskListHTML = tasks
+          .map(
+            (task) => `
+              <div class="task-item ${task.completed ? "completed" : ""}">
                   <input type="checkbox" 
                          id="task-${task.id}" 
-                         ${task.completed ? 'checked' : ''} 
+                         ${task.completed ? "checked" : ""} 
                          onchange="TaskManager.toggleTask(${task.id})">
                   <label for="task-${task.id}">${task.text}</label>
                   <button onclick="TaskManager.deleteTask(${task.id})" 
@@ -2842,11 +2969,13 @@
                       ×
                   </button>
               </div>
-          `).join('');
+          `
+          )
+          .join("");
 
-          const taskContainer = document.getElementById('taskListContainer');
-          if (taskContainer) {
-              taskContainer.innerHTML = `
+        const taskContainer = document.getElementById("taskListContainer");
+        if (taskContainer) {
+          taskContainer.innerHTML = `
                   <div class="task-input-group">
                       <input type="text" 
                              id="newTaskInput" 
@@ -2856,29 +2985,35 @@
                   </div>
                   ${taskListHTML}
               `;
-          }
+        }
       }
 
       function updateRecentActivity() {
-          const activities = ActivityTracker.getActivities();
-          const activityHTML = activities.map(activity => `
+        const activities = ActivityTracker.getActivities();
+        const activityHTML = activities
+          .map(
+            (activity) => `
               <div class="activity-item">
                   <div class="activity-icon">${activity.icon}</div>
                   <div class="activity-details">
                       <p class="activity-title">${activity.title}</p>
-                      <p class="activity-time">${ActivityTracker.formatTimeAgo(activity.timestamp)}</p>
+                      <p class="activity-time">${ActivityTracker.formatTimeAgo(
+                        activity.timestamp
+                      )}</p>
                   </div>
               </div>
-          `).join('');
+          `
+          )
+          .join("");
 
-          const container = document.getElementById('activityTimelineContainer');
-          if (container) {
-              container.innerHTML = activityHTML;
-          }
+        const container = document.getElementById("activityTimelineContainer");
+        if (container) {
+          container.innerHTML = activityHTML;
+        }
       }
 
       function updateQuickActions() {
-          const actionsHTML = `
+        const actionsHTML = `
               <button class="action-card" onclick="navigateTo('idea-generation')">
                   <div class="action-icon">💡</div>
                   <div class="action-text">
@@ -2909,264 +3044,311 @@
               </button>
           `;
 
-          const container = document.getElementById('quickActionsContainer');
-          if (container) {
-              container.innerHTML = actionsHTML;
-          }
+        const container = document.getElementById("quickActionsContainer");
+        if (container) {
+          container.innerHTML = actionsHTML;
+        }
       }
 
       // Helper functions
       function getIdeasTrend(ideas) {
-          const recentIdeas = ideas.filter(idea => {
-              const ideaDate = new Date(idea.timestamp || Date.now());
-              const weekAgo = new Date();
-              weekAgo.setDate(weekAgo.getDate() - 7);
-              return ideaDate >= weekAgo;
-          }).length;
-          
-          return recentIdeas > 0 ? `+${recentIdeas} this week` : 'No new ideas this week';
+        const recentIdeas = ideas.filter((idea) => {
+          const ideaDate = new Date(idea.timestamp || Date.now());
+          const weekAgo = new Date();
+          weekAgo.setDate(weekAgo.getDate() - 7);
+          return ideaDate >= weekAgo;
+        }).length;
+
+        return recentIdeas > 0
+          ? `+${recentIdeas} this week`
+          : "No new ideas this week";
       }
 
       function getNextPostInfo(scheduledDates) {
-          if (scheduledDates.length === 0) return 'No scheduled posts';
-          
-          const nextDate = getNextPostDate(scheduledDates);
-          return nextDate ? `Next post in ${nextDate}` : 'No upcoming posts';
+        if (scheduledDates.length === 0) return "No scheduled posts";
+
+        const nextDate = getNextPostDate(scheduledDates);
+        return nextDate ? `Next post in ${nextDate}` : "No upcoming posts";
       }
 
       function getProfileScoreTrend() {
-          const previousScore = localStorage.getItem('previousProfileScore');
-          const currentScore = localStorage.getItem('profileScore');
-          
-          if (!previousScore || !currentScore) return 'First analysis';
-          
-          const difference = currentScore - previousScore;
-          return difference >= 0 ? `+${difference}% from last analysis` : `${difference}% from last analysis`;
+        const previousScore = localStorage.getItem("previousProfileScore");
+        const currentScore = localStorage.getItem("profileScore");
+
+        if (!previousScore || !currentScore) return "First analysis";
+
+        const difference = currentScore - previousScore;
+        return difference >= 0
+          ? `+${difference}% from last analysis`
+          : `${difference}% from last analysis`;
       }
 
       function getRelevantTasks() {
-          // You can customize this to pull from localStorage or your backend
-          return [
-              { id: 'task1', text: 'Generate new post ideas', completed: false },
-              { id: 'task2', text: 'Schedule content for next week', completed: false },
-              { id: 'task3', text: 'Review profile optimization suggestions', completed: false }
-          ];
+        // You can customize this to pull from localStorage or your backend
+        return [
+          { id: "task1", text: "Generate new post ideas", completed: false },
+          {
+            id: "task2",
+            text: "Schedule content for next week",
+            completed: false,
+          },
+          {
+            id: "task3",
+            text: "Review profile optimization suggestions",
+            completed: false,
+          },
+        ];
       }
 
       function getRecentActivities() {
-          // You can customize this to pull from localStorage or your backend
-          return [
-              { icon: '✍️', title: 'Generated new post ideas', time: '2 hours ago' },
-              { icon: '📅', title: 'Scheduled post for next week', time: 'Yesterday' },
-              { icon: '⭐', title: 'Updated profile score', time: '2 days ago' }
-          ];
+        // You can customize this to pull from localStorage or your backend
+        return [
+          {
+            icon: "✍️",
+            title: "Generated new post ideas",
+            time: "2 hours ago",
+          },
+          {
+            icon: "📅",
+            title: "Scheduled post for next week",
+            time: "Yesterday",
+          },
+          { icon: "⭐", title: "Updated profile score", time: "2 days ago" },
+        ];
       }
 
       function toggleTask(taskId) {
-          // Implement task toggling logic here
-          console.log(`Task ${taskId} toggled`);
+        // Implement task toggling logic here
+        console.log(`Task ${taskId} toggled`);
       }
 
       // Add this to your existing event listeners
-      document.addEventListener('DOMContentLoaded', function() {
-          // ... existing initialization code ...
-          initializeHomePage();
+      document.addEventListener("DOMContentLoaded", function () {
+        // ... existing initialization code ...
+        initializeHomePage();
       });
 
       // Update the navigateTo function to refresh home page when returning to it
       function navigateTo(section) {
-          document.querySelectorAll('.nav-button').forEach(btn => {
-              btn.classList.remove('active');
-              if (btn.getAttribute('data-target') === section) {
-                  btn.classList.add('active');
-              }
-          });
-
-          document.querySelectorAll('.content-section').forEach(section => {
-              section.classList.remove('active');
-          });
-          
-          const targetSection = document.getElementById(section);
-          targetSection.classList.add('active');
-          
-          // Refresh home page data when navigating to it
-          if (section === 'home') {
-              initializeHomePage();
+        document.querySelectorAll(".nav-button").forEach((btn) => {
+          btn.classList.remove("active");
+          if (btn.getAttribute("data-target") === section) {
+            btn.classList.add("active");
           }
+        });
+
+        document.querySelectorAll(".content-section").forEach((section) => {
+          section.classList.remove("active");
+        });
+
+        const targetSection = document.getElementById(section);
+        targetSection.classList.add("active");
+
+        // Refresh home page data when navigating to it
+        if (section === "home") {
+          initializeHomePage();
+        }
       }
 
       // Activity and Task Management Systems
       const STORAGE_KEYS = {
-          getTasks: (userId) => `user_${userId}_tasks`,
-          getActivities: (userId) => `user_${userId}_activities`,
-          getSavedIdeas: (userId) => `user_${userId}_savedIdeas`,
-          getScheduledPosts: (userId) => `user_${userId}_scheduledPosts`,
-          getProfileScore: (userId) => `user_${userId}_profileScore`,
-          getPreviousProfileScore: (userId) => `user_${userId}_previousProfileScore`,
-          getLinkedInPreferences: (userId) => `user_${userId}_linkedinPreferences`,
-          getLinkedInSetupComplete: (userId) => `user_${userId}_linkedinSetupComplete`
+        getTasks: (userId) => `user_${userId}_tasks`,
+        getActivities: (userId) => `user_${userId}_activities`,
+        getSavedIdeas: (userId) => `user_${userId}_savedIdeas`,
+        getScheduledPosts: (userId) => `user_${userId}_scheduledPosts`,
+        getProfileScore: (userId) => `user_${userId}_profileScore`,
+        getPreviousProfileScore: (userId) =>
+          `user_${userId}_previousProfileScore`,
+        getLinkedInPreferences: (userId) =>
+          `user_${userId}_linkedinPreferences`,
+        getLinkedInSetupComplete: (userId) =>
+          `user_${userId}_linkedinSetupComplete`,
       };
 
       // Activity Tracking System
       class ActivityTracker {
-          static addActivity(action, details = '') {
-              const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-              if (!currentUser) return;
+        static addActivity(action, details = "") {
+          const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          if (!currentUser) return;
 
-              const activities = this.getActivities();
-              const newActivity = {
-                  id: Date.now(),
-                  icon: this.getActivityIcon(action),
-                  title: this.getActivityTitle(action, details),
-                  timestamp: new Date().toISOString(),
-                  type: action
-              };
-              
-              activities.unshift(newActivity);
-              if (activities.length > 10) activities.pop();
-              
-              localStorage.setItem(STORAGE_KEYS.getActivities(currentUser.id), JSON.stringify(activities));
-              updateRecentActivity();
+          const activities = this.getActivities();
+          const newActivity = {
+            id: Date.now(),
+            icon: this.getActivityIcon(action),
+            title: this.getActivityTitle(action, details),
+            timestamp: new Date().toISOString(),
+            type: action,
+          };
+
+          activities.unshift(newActivity);
+          if (activities.length > 10) activities.pop();
+
+          localStorage.setItem(
+            STORAGE_KEYS.getActivities(currentUser.id),
+            JSON.stringify(activities)
+          );
+          updateRecentActivity();
+        }
+
+        static getActivities() {
+          const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          if (!currentUser) return [];
+          return (
+            JSON.parse(
+              localStorage.getItem(STORAGE_KEYS.getActivities(currentUser.id))
+            ) || []
+          );
+        }
+
+        static getActivityIcon(type) {
+          const icons = {
+            idea_generated: "💡",
+            idea_saved: "💾",
+            post_created: "✍️",
+            post_scheduled: "📅",
+            profile_analyzed: "📊",
+            task_completed: "✅",
+            task_added: "📝",
+          };
+          return icons[type] || "📌";
+        }
+
+        static getActivityTitle(type, details) {
+          const titles = {
+            idea_generated: "Generated new post ideas",
+            idea_saved: "Saved a new idea",
+            post_created: "Created a new post",
+            post_scheduled: `Scheduled post for ${details}`,
+            profile_analyzed: "Updated profile analysis",
+            task_completed: `Completed task: ${details}`,
+            task_added: `Added new task: ${details}`,
+          };
+          return titles[type] || type;
+        }
+
+        static formatTimeAgo(timestamp) {
+          const seconds = Math.floor((new Date() - new Date(timestamp)) / 1000);
+
+          const intervals = {
+            year: 31536000,
+            month: 2592000,
+            week: 604800,
+            day: 86400,
+            hour: 3600,
+            minute: 60,
+          };
+
+          for (const [unit, secondsInUnit] of Object.entries(intervals)) {
+            const interval = Math.floor(seconds / secondsInUnit);
+            if (interval >= 1) {
+              return interval === 1
+                ? `1 ${unit} ago`
+                : `${interval} ${unit}s ago`;
+            }
           }
 
-          static getActivities() {
-              const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-              if (!currentUser) return [];
-              return JSON.parse(localStorage.getItem(STORAGE_KEYS.getActivities(currentUser.id))) || [];
-          }
-
-          static getActivityIcon(type) {
-              const icons = {
-                  'idea_generated': '💡',
-                  'idea_saved': '💾',
-                  'post_created': '✍️',
-                  'post_scheduled': '📅',
-                  'profile_analyzed': '📊',
-                  'task_completed': '✅',
-                  'task_added': '📝'
-              };
-              return icons[type] || '📌';
-          }
-
-          static getActivityTitle(type, details) {
-              const titles = {
-                  'idea_generated': 'Generated new post ideas',
-                  'idea_saved': 'Saved a new idea',
-                  'post_created': 'Created a new post',
-                  'post_scheduled': `Scheduled post for ${details}`,
-                  'profile_analyzed': 'Updated profile analysis',
-                  'task_completed': `Completed task: ${details}`,
-                  'task_added': `Added new task: ${details}`
-              };
-              return titles[type] || type;
-          }
-
-          static formatTimeAgo(timestamp) {
-              const seconds = Math.floor((new Date() - new Date(timestamp)) / 1000);
-              
-              const intervals = {
-                  year: 31536000,
-                  month: 2592000,
-                  week: 604800,
-                  day: 86400,
-                  hour: 3600,
-                  minute: 60
-              };
-
-              for (const [unit, secondsInUnit] of Object.entries(intervals)) {
-                  const interval = Math.floor(seconds / secondsInUnit);
-                  if (interval >= 1) {
-                      return interval === 1 ? `1 ${unit} ago` : `${interval} ${unit}s ago`;
-                  }
-              }
-              
-              return 'Just now';
-          }
+          return "Just now";
+        }
       }
 
       // Task Management System
       class TaskManager {
-          static addTask(text) {
-              const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-              if (!currentUser) return;
+        static addTask(text) {
+          const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          if (!currentUser) return;
 
-              const tasks = this.getTasks();
-              const newTask = {
-                  id: Date.now(),
-                  text: text,
-                  completed: false,
-                  createdAt: new Date().toISOString()
-              };
-              
-              tasks.push(newTask);
-              localStorage.setItem(STORAGE_KEYS.getTasks(currentUser.id), JSON.stringify(tasks));
-              ActivityTracker.addActivity('task_added', text);
-              updateTasks();
-          }
+          const tasks = this.getTasks();
+          const newTask = {
+            id: Date.now(),
+            text: text,
+            completed: false,
+            createdAt: new Date().toISOString(),
+          };
 
-          static getTasks() {
-              const currentUser = JSON.parse(sessionStorage.getItem('currentUser'));
-              if (!currentUser) return [];
-              return JSON.parse(localStorage.getItem(STORAGE_KEYS.getTasks(currentUser.id))) || [];
-          }
+          tasks.push(newTask);
+          localStorage.setItem(
+            STORAGE_KEYS.getTasks(currentUser.id),
+            JSON.stringify(tasks)
+          );
+          ActivityTracker.addActivity("task_added", text);
+          updateTasks();
+        }
 
-          static toggleTask(taskId) {
-              const tasks = this.getTasks();
-              const task = tasks.find(t => t.id === parseInt(taskId));
-              if (task) {
-                  task.completed = !task.completed;
-                  if (task.completed) {
-                      ActivityTracker.addActivity('task_completed', task.text);
-                  }
-                  localStorage.setItem(STORAGE_KEYS.getTasks(currentUser.id), JSON.stringify(tasks));
-                  updateTasks();
-              }
-          }
+        static getTasks() {
+          const currentUser = JSON.parse(sessionStorage.getItem("currentUser"));
+          if (!currentUser) return [];
+          return (
+            JSON.parse(
+              localStorage.getItem(STORAGE_KEYS.getTasks(currentUser.id))
+            ) || []
+          );
+        }
 
-          static deleteTask(taskId) {
-              const tasks = this.getTasks().filter(t => t.id !== parseInt(taskId));
-              localStorage.setItem(STORAGE_KEYS.getTasks(currentUser.id), JSON.stringify(tasks));
-              updateTasks();
+        static toggleTask(taskId) {
+          const tasks = this.getTasks();
+          const task = tasks.find((t) => t.id === parseInt(taskId));
+          if (task) {
+            task.completed = !task.completed;
+            if (task.completed) {
+              ActivityTracker.addActivity("task_completed", task.text);
+            }
+            localStorage.setItem(
+              STORAGE_KEYS.getTasks(currentUser.id),
+              JSON.stringify(tasks)
+            );
+            updateTasks();
           }
+        }
+
+        static deleteTask(taskId) {
+          const tasks = this.getTasks().filter(
+            (t) => t.id !== parseInt(taskId)
+          );
+          localStorage.setItem(
+            STORAGE_KEYS.getTasks(currentUser.id),
+            JSON.stringify(tasks)
+          );
+          updateTasks();
+        }
       }
 
       // Function to add new task
       function addNewTask() {
-          const input = document.getElementById('newTaskInput');
-          const text = input.value.trim();
-          
-          if (text) {
-              TaskManager.addTask(text);
-              input.value = ''; // Clear input
-          }
+        const input = document.getElementById("newTaskInput");
+        const text = input.value.trim();
+
+        if (text) {
+          TaskManager.addTask(text);
+          input.value = ""; // Clear input
+        }
       }
 
       // Add user-specific storage keys
       const getUserStorageKey = (key) => {
-          const userId = sessionStorage.getItem('currentUser')?.id || 'default';
-          return `user_${userId}_${key}`;
+        const userId = sessionStorage.getItem("currentUser")?.id || "default";
+        return `user_${userId}_${key}`;
       };
 
       function deleteAllUsers() {
-          // Clear session storage
-          sessionStorage.clear();
-          
-          // Clear all user-related data from local storage
-          const userKeys = [
-              'linkedinPreferences',
-              'linkedinSetupComplete',
-              'savedIdeas',
-              'scheduledPosts',
-              'profileScore',
-              'previousProfileScore',
-              'tasks',
-              'activities'
-          ];
-          
-          userKeys.forEach(key => localStorage.removeItem(key));
-          
-          // Redirect to auth page
-          window.location.href = 'auth.html';
+        // Clear session storage
+        sessionStorage.clear();
+
+        // Clear all user-related data from local storage
+        const userKeys = [
+          "linkedinPreferences",
+          "linkedinSetupComplete",
+          "savedIdeas",
+          "scheduledPosts",
+          "profileScore",
+          "previousProfileScore",
+          "tasks",
+          "activities",
+        ];
+
+        userKeys.forEach((key) => localStorage.removeItem(key));
+
+        // Redirect to auth page
+        window.location.href = "auth.html";
       }
     </script>
   </body>
