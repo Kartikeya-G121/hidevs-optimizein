@@ -1810,6 +1810,7 @@
 
         // Clear existing cards and show loading state
         ideasGrid.innerHTML = "";
+        // Create 4 idea cards with loading state
         for (let i = 0; i < 4; i++) {
           ideasGrid.innerHTML += `
             <div class="idea-card card">
@@ -1830,18 +1831,18 @@
               method: "POST",
               headers: {
                 "Content-Type": "application/json",
-                Authorization: `Bearer ${API_KEY}`,
+                "Authorization": `Bearer ${API_KEY}`,
               },
               body: JSON.stringify({
                 model: "llama3-70b-8192",
                 messages: [
                   {
                     role: "system",
-                    content: "Generate exactly 4 unique content ideas. Each idea should have a title and explanation. Format each idea as 'Title: [title]\\nExplanation: [explanation]'. Separate each idea with '---'",
+                    content: "You are a content idea generator. Generate exactly 4 unique content ideas. Each idea should have a title and explanation. Format each idea as 'Title: [title]\\nExplanation: [explanation]'. Separate each idea with '---'",
                   },
                   {
                     role: "user",
-                    content: `Generate 4 unique content ideas related to: ${input}`
+                    content: `Generate 4 unique content ideas related to: ${input}`,
                   },
                 ],
                 temperature: 0.8,
@@ -1855,7 +1856,7 @@
           const data = await response.json();
           const ideas = data.choices[0].message.content.split('---').filter(idea => idea.trim());
 
-          // Update idea cards
+          // Update idea cards with generated content
           const ideaCards = document.querySelectorAll(".idea-text");
           ideas.forEach((idea, index) => {
             if (ideaCards[index]) {
@@ -1871,6 +1872,9 @@
             }
           });
 
+          // Track activity
+          ActivityTracker.addActivity('idea_generated');
+
         } catch (error) {
           console.error("Error:", error);
           const ideaCards = document.querySelectorAll(".idea-text");
@@ -1878,9 +1882,6 @@
             card.textContent = "Failed to generate idea. Please try again.";
           });
         }
-
-        // Add this new function
-        ActivityTracker.addActivity('idea_generated');
       }
 
       // Add this new function
