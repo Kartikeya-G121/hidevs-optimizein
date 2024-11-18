@@ -1,12 +1,13 @@
 # OPTIMIZIEN: Personalize Your LinkedIn Optimization
 
-# Project Overview
+## Project Overview
 
 OPTIMIZIEN is a tool designed to streamline LinkedIn content management for professional content creators and businesses. 
 By leveraging AI, it simplifies the processes of content generation, scheduling, and profile optimization, 
 helping users maintain a consistent and high-quality presence on LinkedIn.
+Access it here- https://manojkulkarni123.github.io/hidevs-optimizein/
 
-# Key Features
+## Key Features
 
 ## AI-Powered Content Generation
 Automated idea generation based on topics.
