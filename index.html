@@ -28,11 +28,18 @@
         );
       }
 
+      /* Base border radius for all elements */
+      * {
+        border-radius: 12px;
+      }
+
+      /* Main containers and cards */
       .sidebar {
         width: 250px;
         background-color: #f3f4f6;
         border-right: 1px solid #e5e7eb;
         padding: 20px;
+        border-radius: 24px;
       }
 
       .sidebar h1 {
@@ -74,12 +81,13 @@
         flex-grow: 1;
         padding: 20px;
         overflow-y: auto;
+        border-radius: 24px;
       }
 
       .card {
         background-color: white;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 20px;
         margin-bottom: 20px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
@@ -95,7 +103,7 @@
       .stat-card {
         background-color: white;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 16px;
         padding: 20px;
         box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
       }
@@ -121,7 +129,7 @@
         color: white;
         border: none;
         padding: 10px 20px;
-        border-radius: 4px;
+        border-radius: 12px;
         cursor: pointer;
         transition: background-color 0.3s;
       }
@@ -136,7 +144,7 @@
         padding: 10px;
         margin-bottom: 10px;
         border: 1px solid #d1d5db;
-        border-radius: 4px;
+        border-radius: 12px;
       }
 
       .content-section {
@@ -163,7 +171,7 @@
         color: white;
         border: none;
         padding: 10px 20px;
-        border-radius: 4px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.3s ease;
       }
@@ -200,7 +208,7 @@
         color: var(--purple-600);
         border: 1px solid var(--purple-600);
         padding: 8px 16px;
-        border-radius: 4px;
+        border-radius: 12px;
         cursor: pointer;
       }
 
@@ -227,7 +235,7 @@
       .chat-message {
         margin-bottom: 10px;
         padding: 8px 12px;
-        border-radius: 8px;
+        border-radius: 16px;
         max-width: 80%;
       }
 
@@ -252,7 +260,7 @@
         flex-grow: 1;
         padding: 10px;
         border: 1px solid #e5e7eb;
-        border-radius: 4px;
+        border-radius: 12px;
         font-size: 14px;
       }
 
@@ -317,7 +325,7 @@
         color: white;
         border: none;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         font-weight: 500;
         display: flex;
@@ -341,7 +349,7 @@
       .idea-card {
         background: white;
         padding: 24px;
-        border-radius: 12px;
+        border-radius: 16px;
         border: 1px solid #e5e7eb;
         margin-bottom: 20px;
       }
@@ -379,7 +387,7 @@
         color: white;
         border: none;
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         font-weight: 500;
         font-size: 14px;
@@ -390,7 +398,7 @@
         color: var(--purple-600);
         border: 1px solid var(--purple-600);
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         font-weight: 500;
         font-size: 14px;
@@ -422,7 +430,7 @@
       .saved-idea-card {
         background: white;
         padding: 24px;
-        border-radius: 12px;
+        border-radius: 16px;
         border: 1px solid #e5e7eb;
         position: relative;
       }
@@ -451,7 +459,7 @@
         color: #ef4444;
         cursor: pointer;
         padding: 4px;
-        border-radius: 4px;
+        border-radius: 12px;
         transition: all 0.2s ease;
       }
 
@@ -465,7 +473,7 @@
         color: #6b7280;
         font-family: var(--font-secondary);
         background: #f9fafb;
-        border-radius: 12px;
+        border-radius: 16px;
         border: 1px dashed #e5e7eb;
       }
 
@@ -476,7 +484,7 @@
         background-color: var(--purple-600);
         color: white;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 16px;
         font-family: var(--font-secondary);
         font-size: 14px;
         animation: slideIn 0.3s ease, slideOut 0.3s ease 1.7s;
@@ -492,7 +500,7 @@
         color: #ef4444;
         cursor: pointer;
         padding: 8px;
-        border-radius: 4px;
+        border-radius: 12px;
         transition: all 0.2s ease;
         font-size: 16px;
         display: flex;
@@ -542,7 +550,7 @@
         color: white;
         border: none;
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         font-weight: 500;
         font-size: 14px;
@@ -573,7 +581,7 @@
         border: 1px solid var(--purple-600);
         color: var(--purple-600);
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.2s ease;
       }
@@ -602,7 +610,7 @@
         aspect-ratio: 1;
         padding: 8px;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.2s ease;
         position: relative;
@@ -643,7 +651,7 @@
         transform: translate(-50%, -50%);
         background: white;
         padding: 24px;
-        border-radius: 12px;
+        border-radius: 24px;
         box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
         z-index: 1000;
         max-width: 500px;
@@ -677,7 +685,7 @@
       .time-input {
         padding: 8px 12px;
         border: 1px solid #e5e7eb;
-        border-radius: 6px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         color: #111827;
         width: 120px;
@@ -688,7 +696,7 @@
         margin: 16px 0;
         padding: 12px;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 12px;
         resize: vertical;
         font-family: var(--font-secondary);
         font-size: 14px;
@@ -729,7 +737,7 @@
         background-color: var(--purple-600);
         color: white;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 16px;
         font-family: var(--font-secondary);
         font-size: 14px;
         animation: slideIn 0.3s ease, slideOut 0.3s ease 1.7s;
@@ -761,7 +769,7 @@
       .schedule-modal {
         background: white;
         padding: 24px;
-        border-radius: 12px;
+        border-radius: 24px;
         width: 90%;
         max-width: 500px;
       }
@@ -776,7 +784,7 @@
       .time-input {
         padding: 8px 12px;
         border: 1px solid #e5e7eb;
-        border-radius: 6px;
+        border-radius: 12px;
         font-family: var(--font-secondary);
         width: 120px;
         font-size: 14px;
@@ -797,7 +805,7 @@
         width: 100%;
         padding: 12px;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 12px;
         resize: vertical;
         font-family: var(--font-secondary);
         font-size: 14px;
@@ -814,7 +822,7 @@
       .cancel-button,
       .schedule-button {
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         font-size: 14px;
         cursor: pointer;
         transition: all 0.2s ease;
@@ -840,7 +848,7 @@
         min-height: 80px;
         padding: 8px;
         border: 1px solid #e5e7eb;
-        border-radius: 8px;
+        border-radius: 12px;
         cursor: pointer;
         transition: all 0.2s ease;
         position: relative;
@@ -883,7 +891,7 @@
         background-color: var(--purple-600);
         color: white;
         padding: 12px 24px;
-        border-radius: 8px;
+        border-radius: 16px;
         font-family: var(--font-secondary);
         font-size: 14px;
         animation: slideIn 0.3s ease, slideOut 0.3s ease 1.7s;
@@ -899,7 +907,7 @@
       .preference-section {
         background: #f8f9fa;
         padding: 1rem;
-        border-radius: 8px;
+        border-radius: 16px;
       }
 
       .preference-section h4 {
@@ -1018,7 +1026,7 @@
       .preference-section {
         background: #f8f9fa;
         padding: 1rem;
-        border-radius: 8px;
+        border-radius: 16px;
         margin-bottom: 1rem;
       }
 
@@ -1042,7 +1050,7 @@
       .stat-card {
         background: white;
         padding: 1.5rem;
-        border-radius: 12px;
+        border-radius: 16px;
         border: 1px solid #e5e7eb;
         display: flex;
         align-items: center;
@@ -1113,7 +1121,7 @@
         align-items: center;
         gap: 1rem;
         padding: 0.75rem;
-        border-radius: 8px;
+        border-radius: 12px;
         transition: background-color 0.2s;
       }
 
@@ -1151,7 +1159,7 @@
         padding: 1.25rem;
         background: white;
         border: 1px solid #e5e7eb;
-        border-radius: 12px;
+        border-radius: 16px;
         cursor: pointer;
         transition: all 0.3s ease;
         text-align: left;
@@ -1198,7 +1206,7 @@
         color: white;
         border: none;
         padding: 8px 16px;
-        border-radius: 6px;
+        border-radius: 12px;
         cursor: pointer;
         transition: background-color 0.2s;
       }
@@ -1262,8 +1270,178 @@
         font-size: 12px;
         color: #6b7280;
       }
+
+      /* Analytics Card Styles */
+      .analytics-card .mini-chart {
+        height: 60px;
+        margin: 8px 0;
+      }
+
+      /* Template Library Styles */
+      .template-modal {
+        background: white;
+        padding: 2rem;
+        border-radius: 16px;
+        max-width: 800px;
+        width: 90%;
+        max-height: 80vh;
+        overflow-y: auto;
+      }
+
+      .template-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .template-card {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+
+      .template-card:hover {
+        background: #f3f4f6;
+        transform: translateY(-2px);
+      }
+
+      /* Collaboration Tools Styles */
+      .collaboration-tools {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+
+      .collab-button {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        background: white;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .collab-button:hover {
+        background: #f3f4f6;
+      }
+
+      .comment-count {
+        background: var(--purple-600);
+        color: white;
+        padding: 0.25rem 0.5rem;
+        border-radius: 12px;
+        font-size: 0.75rem;
+      }
+
+      /* Hashtag Styles */
+      .hashtag-suggestions {
+        margin-top: 1rem;
+        padding: 1rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+      }
+
+      .hashtag-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        margin: 1rem 0;
+      }
+
+      .hashtag-pill {
+        padding: 0.5rem 1rem;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 20px;
+        cursor: pointer;
+        transition: all 0.2s ease;
+      }
+
+      .hashtag-pill.selected {
+        background: var(--purple-600);
+        color: white;
+        border-color: var(--purple-600);
+      }
+
+      /* Platform Integration Styles */
+      .platform-selector {
+        margin-top: 1rem;
+      }
+
+      .platform-options {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .platform-option {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: white;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        cursor: pointer;
+      }
+
+      /* Prediction Card Styles */
+      .prediction-card {
+        background: #f8f9fa;
+        padding: 1rem;
+        border-radius: 8px;
+        margin-top: 1rem;
+      }
+
+      .metrics-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+        gap: 1rem;
+        margin-top: 1rem;
+      }
+
+      .metric {
+        background: white;
+        padding: 1rem;
+        border-radius: 6px;
+      }
+
+      .confidence-bar {
+        height: 4px;
+        background: var(--purple-600);
+        border-radius: 2px;
+        margin-top: 0.5rem;
+      }
+
+      /* Content Search Styles */
+      .content-search {
+        margin-bottom: 1rem;
+      }
+
+      .filter-options {
+        display: flex;
+        gap: 1rem;
+        margin-top: 0.5rem;
+      }
+
+      .filter-options select {
+        padding: 0.5rem;
+        border: 1px solid #e5e7eb;
+        border-radius: 6px;
+        background: white;
+      }
     </style>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.4.120/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
   </head>
   <body>
@@ -1420,6 +1598,9 @@
             <button onclick="copyToClipboard()" class="secondary-button">
               Copy Post
             </button>
+            <button onclick="postToLinkedIn()" class="secondary-button">
+              Post to LinkedIn
+            </button>
             <button onclick="scheduleGeneratedPost()" class="secondary-button">
               Schedule Post
             </button>
@@ -1464,7 +1645,7 @@
 
         <!-- Upload Section -->
         <div class="card" style="text-align: center; padding: 40px">
-          <div id="dropZone" style="border: 2px dashed #e5e7eb; border-radius: 8px; padding: 40px; margin-bottom: 20px;">
+          <div id="dropZone" style="border: 2px dashed #e5e7eb; border-radius: 16px; padding: 40px; margin-bottom: 20px;">
             <h2>How to Upload Your LinkedIn Profile</h2>
             <ol style="text-align: left; max-width: 400px; margin: 0 auto;">
               <li>Go to your LinkedIn profile.</li>
@@ -1560,6 +1741,260 @@
     </div>
 
     <script>
+      // 1. Storage Manager
+      const StorageManager = {
+          set: (key, value) => {
+              try {
+                  localStorage.setItem(key, JSON.stringify(value));
+                  return true;
+              } catch (e) {
+                  console.error('Storage error:', e);
+                  return false;
+              }
+          },
+          get: (key, defaultValue = null) => {
+              try {
+                  const item = localStorage.getItem(key);
+                  return item ? JSON.parse(item) : defaultValue;
+              } catch (e) {
+                  console.error('Storage error:', e);
+                  return defaultValue;
+              }
+          }
+      };
+
+      // 2. Toast Manager
+      const ToastManager = {
+          show(message, type = 'info') {
+              const toast = document.createElement('div');
+              toast.className = `toast-message toast-${type}`;
+              toast.textContent = message;
+              
+              document.body.appendChild(toast);
+              
+              setTimeout(() => {
+                  toast.remove();
+              }, 2000);
+          }
+      };
+
+      // 3. Form Validator
+      const FormValidator = {
+          validateInput(input, rules) {
+              const errors = [];
+              
+              rules.forEach(rule => {
+                  if (!rule.validate(input)) {
+                      errors.push(rule.message);
+                  }
+              });
+              
+              return errors;
+          },
+          
+          rules: {
+              required: {
+                  validate: input => input.trim().length > 0,
+                  message: 'This field is required'
+              },
+              minLength: (min) => ({
+                  validate: input => input.length >= min,
+                  message: `Must be at least ${min} characters`
+              }),
+              maxLength: (max) => ({
+                  validate: input => input.length <= max,
+                  message: `Must be no more than ${max} characters`
+              })
+          }
+      };
+
+      // 4. Activity Tracker
+      window.ActivityTracker = window.ActivityTracker || {
+          activities: StorageManager.get('activities', []),
+          maxActivities: 50,
+          
+          addActivity(type, details = {}) {
+              const activity = {
+                  type,
+                  details,
+                  timestamp: new Date().toISOString(),
+                  userId: StorageManager.get('currentUser')?.id
+              };
+              
+              this.activities.unshift(activity);
+              
+              if (this.activities.length > this.maxActivities) {
+                  this.activities.pop();
+              }
+              
+              StorageManager.set('activities', this.activities);
+              this.updateUI();
+          },
+          
+          updateUI() {
+              const container = document.getElementById('activityTimelineContainer');
+              if (!container) return;
+              
+              container.innerHTML = this.activities
+                  .map(activity => this.formatActivity(activity))
+                  .join('');
+          },
+          
+          formatActivity(activity) {
+              const templates = {
+                  post_created: 'Created a new post',
+                  idea_generated: 'Generated new ideas',
+                  post_scheduled: `Scheduled a post for ${activity.details.date}`,
+                  idea_saved: 'Saved a new idea'
+              };
+              
+              return `
+                  <div class="activity-item">
+                      <div class="activity-icon">📝</div>
+                      <div class="activity-details">
+                          <div class="activity-title">${templates[activity.type] || activity.type}</div>
+                          <div class="activity-time">${this.formatTime(activity.timestamp)}</div>
+                      </div>
+                  </div>
+              `;
+          },
+          
+          formatTime(timestamp) {
+              return new Date(timestamp).toLocaleString();
+          }
+      };
+
+      // 5. Calendar Manager
+      const CalendarManager = {
+          scheduledPosts: StorageManager.get('scheduledPosts', {}),
+          
+          init() {
+              this.loadPosts();
+              this.render();
+          },
+          
+          loadPosts() {
+              this.scheduledPosts = StorageManager.get('scheduledPosts', {});
+          },
+          
+          addPost(date, post) {
+              this.scheduledPosts[date] = post;
+              StorageManager.set('scheduledPosts', this.scheduledPosts);
+              this.render();
+              ToastManager.show('Post scheduled successfully', 'success');
+          },
+          
+          removePost(date) {
+              delete this.scheduledPosts[date];
+              StorageManager.set('scheduledPosts', this.scheduledPosts);
+              this.render();
+              ToastManager.show('Post removed successfully', 'info');
+          },
+          
+          render() {
+              generateCalendar(currentDate);
+          }
+      };
+
+      // 6. Debounce Utility
+      function debounce(func, wait) {
+          let timeout;
+          return function executedFunction(...args) {
+              const later = () => {
+                  clearTimeout(timeout);
+                  func(...args);
+              };
+              clearTimeout(timeout);
+              timeout = setTimeout(later, wait);
+          };
+      }
+
+      // Now, let's update some of your existing functions to use these new utilities:
+
+      // Update generateIdeas function
+      async function generateIdeas() {
+          const input = document.getElementById("ideaInput").value.trim();
+          const ideasGrid = document.querySelector(".ideas-grid");
+          
+          // Validate input
+          const errors = FormValidator.validateInput(input, [FormValidator.rules.required]);
+          if (errors.length > 0) {
+              ToastManager.show(errors[0], 'error');
+              return;
+          }
+          
+          try {
+              ideasGrid.classList.add("loading");
+              
+              // Your existing API call code here...
+              
+              ActivityTracker.addActivity('idea_generated');
+              ToastManager.show('Ideas generated successfully', 'success');
+              
+          } catch (error) {
+              console.error('Error generating ideas:', error);
+              ToastManager.show('Failed to generate ideas. Please try again.', 'error');
+          } finally {
+              ideasGrid.classList.remove("loading");
+          }
+      }
+
+      // Update saveIdea function
+      function saveIdea(button) {
+          const ideaCard = button.closest(".idea-card");
+          const ideaText = ideaCard.querySelector(".idea-text").textContent;
+          
+          let savedIdeas = StorageManager.get('savedIdeas', []);
+          
+          if (!savedIdeas.includes(ideaText)) {
+              savedIdeas.push(ideaText);
+              StorageManager.set('savedIdeas', savedIdeas);
+              
+              updateSavedIdeasDisplay();
+              ActivityTracker.addActivity('idea_saved');
+              ToastManager.show('Idea saved successfully', 'success');
+          }
+      }
+
+      // Update schedulePost function
+      function schedulePost() {
+          const content = document.getElementById("schedulePostContent").value.trim();
+          const time = document.getElementById("postTime").value;
+          const newDate = document.getElementById("postDate").value;
+
+          const errors = FormValidator.validateInput(content, [
+              FormValidator.rules.required,
+              FormValidator.rules.maxLength(3000)
+          ]);
+
+          if (errors.length > 0) {
+              ToastManager.show(errors[0], 'error');
+              return;
+          }
+
+          if (content && time && newDate) {
+              CalendarManager.addPost(newDate, { content, time });
+              closeModal();
+              ActivityTracker.addActivity('post_scheduled', { date: newDate });
+          } else {
+              ToastManager.show('Please fill in all fields', 'error');
+          }
+      }
+
+      // Initialize everything when the page loads
+      document.addEventListener('DOMContentLoaded', function() {
+          CalendarManager.init();
+          ActivityTracker.updateUI();
+          
+          // Add debouncing to input fields
+          const postInput = document.getElementById('postInput');
+          if (postInput) {
+              postInput.addEventListener('input', debounce(function() {
+                  updateCharCount(this.value.length);
+              }, 300));
+          }
+      });
+
       document.addEventListener('DOMContentLoaded', function() {
         const currentUser = sessionStorage.getItem('currentUser');
         const hasCompletedSetup = localStorage.getItem('linkedinSetupComplete');
@@ -3191,6 +3626,230 @@
           
           // Redirect to auth page
           window.location.href = 'auth.html';
+      }
+
+      // Analytics Dashboard
+      function initializeAnalytics() {
+          const ctx = document.getElementById('performanceChart');
+          if (!ctx) return;
+
+          new Chart(ctx, {
+              type: 'line',
+              data: {
+                  labels: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'],
+                  datasets: [{
+                      label: 'Engagement',
+                      data: [65, 59, 80, 81, 56],
+                      borderColor: 'rgb(147, 51, 234)',
+                      tension: 0.4
+                  }]
+              },
+              options: {
+                  responsive: true,
+                  maintainAspectRatio: false,
+                  plugins: {
+                      legend: {
+                          display: false
+                      }
+                  },
+                  scales: {
+                      x: {
+                          display: false
+                      },
+                      y: {
+                          display: false
+                      }
+                  }
+              }
+          });
+      }
+
+      // Template Library
+      function showTemplateLibrary() {
+          const templates = [
+              { id: 'success-story', title: 'Success Story', description: 'Share your professional achievement' },
+              { id: 'industry-insight', title: 'Industry Insight', description: 'Share expert knowledge' },
+              { id: 'tip-share', title: 'Quick Tip', description: 'Share a professional tip' },
+              { id: 'question-post', title: 'Engagement Question', description: 'Start a discussion' }
+          ];
+
+          const modal = document.createElement('div');
+          modal.innerHTML = `
+              <div class="modal-overlay" onclick="this.parentElement.remove()">
+                  <div class="template-modal" onclick="event.stopPropagation()">
+                      <h3>Content Templates</h3>
+                      <div class="template-grid">
+                          ${templates.map(template => `
+                              <div class="template-card" onclick="useTemplate('${template.id}')">
+                                  <h4>${template.title}</h4>
+                                  <p>${template.description}</p>
+                              </div>
+                          `).join('')}
+                      </div>
+                  </div>
+              </div>
+          `;
+          document.body.appendChild(modal);
+      }
+
+      function useTemplate(templateId) {
+          const templates = {
+              'success-story': `🎉 Excited to share a recent achievement!
+
+[Describe your achievement]
+
+Key takeaways:
+• [Takeaway 1]
+• [Takeaway 2]
+• [Takeaway 3]
+
+#Success #Achievement #Professional`,
+              'industry-insight': `💡 Industry Insight:
+
+[Share your observation about industry trends]
+
+Why this matters:
+• [Point 1]
+• [Point 2]
+• [Point 3]
+
+What are your thoughts on this trend?
+
+#Industry #Trends #Innovation`,
+              'tip-share': `📌 Quick Tip:
+
+[Share your professional tip]
+
+Why it works:
+• [Reason 1]
+• [Reason 2]
+
+What's your favorite tip?
+
+#ProfessionalTip #Career #Growth`,
+              'question-post': `🤔 Question for my network:
+
+[Ask your engaging question]
+
+Share your experiences below!
+
+#Discussion #Professional #Networking`
+          };
+
+          document.getElementById('postInput').value = templates[templateId];
+          document.querySelector('.template-modal')?.parentElement.remove();
+          navigateTo('post-creation');
+      }
+
+      // Hashtag Generator
+      async function generateHashtags(content) {
+          const suggestedTags = [
+              'Innovation', 'Leadership', 'Technology', 'Business', 'Career',
+              'Professional', 'Growth', 'Success', 'Motivation', 'Networking'
+          ];
+
+          const hashtagSection = document.createElement('div');
+          hashtagSection.className = 'hashtag-suggestions';
+          hashtagSection.innerHTML = `
+              <h4>Suggested Hashtags</h4>
+              <div class="hashtag-grid">
+                  ${suggestedTags.map(tag => `
+                      <div class="hashtag-pill" onclick="this.classList.toggle('selected')">
+                          #${tag}
+                      </div>
+                  `).join('')}
+              </div>
+              <button onclick="addSelectedHashtags()" class="add-hashtags-btn">
+                  Add Selected Hashtags
+              </button>
+          `;
+
+          document.querySelector('.generated-content').after(hashtagSection);
+      }
+
+      function addSelectedHashtags() {
+          const selectedTags = Array.from(document.querySelectorAll('.hashtag-pill.selected'))
+              .map(pill => pill.textContent.trim());
+          
+          const generatedPost = document.getElementById('generatedPost');
+          generatedPost.textContent += '\n\n' + selectedTags.join(' ');
+      }
+
+      // Content Performance Prediction
+      async function predictPerformance(content) {
+          const predictionCard = document.createElement('div');
+          predictionCard.className = 'prediction-card';
+          predictionCard.innerHTML = `
+              <h4>Performance Prediction</h4>
+              <div class="metrics-grid">
+                  <div class="metric">
+                      <span class="metric-label">Expected Engagement</span>
+                      <span class="metric-value">High</span>
+                      <div class="confidence-bar" style="width: 85%"></div>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">Best Posting Time</span>
+                      <span class="metric-value">Tuesday 10:00 AM</span>
+                  </div>
+                  <div class="metric">
+                      <span class="metric-label">Audience Match</span>
+                      <span class="metric-value">92%</span>
+                  </div>
+              </div>
+          `;
+
+          document.querySelector('.generated-content').after(predictionCard);
+      }
+
+      // Update the generateWithLlama function to include new features
+      const originalGenerateWithLlama = generateWithLlama;
+      generateWithLlama = async function(tone) {
+          await originalGenerateWithLlama(tone);
+          
+          // Add new features after post generation
+          generateHashtags();
+          predictPerformance();
+      };
+
+      // Initialize new features
+      document.addEventListener('DOMContentLoaded', function() {
+          // ... existing initialization code ...
+          initializeAnalytics();
+          
+          // Add template library to quick actions
+          const quickActionsContainer = document.getElementById('quickActionsContainer');
+          if (quickActionsContainer) {
+              const templateCard = document.createElement('button');
+              templateCard.className = 'action-card';
+              templateCard.onclick = showTemplateLibrary;
+              templateCard.innerHTML = `
+                  <div class="action-icon">📑</div>
+                  <div class="action-text">
+                      <h4>Template Library</h4>
+                      <p>Ready-to-use content templates</p>
+                  </div>
+              `;
+              quickActionsContainer.appendChild(templateCard);
+          }
+      });
+
+      function postToLinkedIn() {
+          const postContent = document.getElementById("generatedPost").textContent;
+          // Open LinkedIn's post creation page in a new tab
+          window.open('https://www.linkedin.com/feed/', '_blank');
+          
+          // Wait briefly for the new window to load, then copy content to clipboard
+          setTimeout(() => {
+              navigator.clipboard.writeText(postContent)
+                  .then(() => {
+                      // Show a toast notification
+                      ToastManager.show('Content copied! Press Ctrl+V (Cmd+V on Mac) to paste your post', 'info');
+                  })
+                  .catch(err => {
+                      console.error('Failed to copy text: ', err);
+                      ToastManager.show('Failed to copy content. Please copy manually.', 'error');
+                  });
+          }, 500);
       }
     </script>
   </body>
